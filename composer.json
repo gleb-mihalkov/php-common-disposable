@@ -1,0 +1,12 @@
+{
+    "name": "gm/php-common-disposable",
+    "description": "Интерфейс, объявляющий паттерн освобождаемого объекта.",
+    "type": "library",
+    "minimum-stability": "stable",
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "Common\\": "src/"
+        }
+    }
+}
