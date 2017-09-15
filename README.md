@@ -19,7 +19,7 @@ class MyDisposable implements IDisposable
 }
 ```
 
-Но вместе с тем рекомендуется использовать типаж `TDispostable`. Он реализует интерфейс `IDisposable` так, чтобы освобождение ресурсов объекта происходило однократно, сколько бы раз не был вызывался метод `dispose`:
+Но также рекомендуется использовать типаж `TDispostable`. Он запрещает повторное освобождение ресурсов:
 
 ```php
 require 'vendor/autoload.php';
@@ -30,19 +30,11 @@ class MyDisposable implements IDisposable
 {
     use TDisposable;
     
-    // Типаж добавляет классу свой защищенный виртуальный метод.
-    // В нем и должно происходить освобождение ресурсов.
-    protected function _dispose()
-    {
-        echo 'Hello, world!';
-    }
+    // Освобождает занятые ресурсы.
+    protected function _dispose() { echo 'Dispose'.PHP_EOL; }
 }
 
 $a = new MyDisposable();
-$a->dispose();
-$a->dispose();
-$a->dispose();
-
-// Выведет:
-// Hello, world!
+$a->dispose(); // >_ Dispose
+$a->dispose(); // Exception!
 ```
