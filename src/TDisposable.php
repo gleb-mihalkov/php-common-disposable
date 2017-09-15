@@ -12,7 +12,17 @@ namespace Common
          *
          * @var bool
          */
-        private $isDisposed = false;
+        private $_isDisposed = false;
+
+        /**
+         * Показывает, были ли освобождены ресурсы данного объекта.
+         *
+         * @return bool Да или нет.
+         */
+        public function isDisposed()
+        {
+            return $this->_isDisposed;
+        }
 
         /**
          * Сигнализирует, что ресурсы, занятые объектом, следует освободить.
@@ -21,9 +31,12 @@ namespace Common
          */
         public function dispose()
         {
-            if ($this->isDisposed) return;
-            $this->isDisposed = true;
+            if ($this->isDisposed())
+            {
+                /** @todo Error. */
+            }
 
+            $this->_isDisposed = true;
             $this->_dispose();
         }
 
