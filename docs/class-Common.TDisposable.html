@@ -41,6 +41,11 @@
 				<li class="active"><a href="class-Common.TDisposable.html">TDisposable</a></li>
 			</ul>
 
+			<h3>Exceptions</h3>
+			<ul>
+				<li><a href="class-Common.DisposableDisposedException.html">DisposableDisposedException</a></li>
+				<li><a href="class-Common.DisposableException.html">DisposableException</a></li>
+			</ul>
 
 
 		</div>
@@ -97,7 +102,7 @@
 		<b>Namespace:</b> <a href="namespace-Common.html">Common</a><br>
 		
 
-			<b>Located at</b> <a href="source-class-Common.TDisposable.html#4-37" title="Go to source code">TDisposable.php</a>
+			<b>Located at</b> <a href="source-class-Common.TDisposable.html#4-50" title="Go to source code">TDisposable.php</a>
 		<br>
 	</div>
 
@@ -105,6 +110,40 @@
 
 	<table class="summary methods" id="methods">
 	<caption>Methods summary</caption>
+	<tr data-order="isDisposed" id="_isDisposed">
+
+		<td class="attributes"><code>
+			 public 
+
+			boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_isDisposed">#</a>
+		<code><a href="source-class-Common.TDisposable.html#17-25" title="Go to source code">isDisposed</a>( )</code>
+
+		<div class="description short">
+			<p>Показывает, были ли освобождены ресурсы данного объекта.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Показывает, были ли освобождены ресурсы данного объекта.</p>
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					boolean<br>Да или нет.
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
 	<tr data-order="dispose" id="_dispose">
 
 		<td class="attributes"><code>
@@ -117,7 +156,7 @@
 
 		<td class="name"><div>
 		<a class="anchor" href="#_dispose">#</a>
-		<code><a href="source-class-Common.TDisposable.html#17-28" title="Go to source code">dispose</a>( )</code>
+		<code><a href="source-class-Common.TDisposable.html#27-41" title="Go to source code">dispose</a>( )</code>
 
 		<div class="description short">
 			<p>Сигнализирует, что ресурсы, занятые объектом, следует освободить.</p>
@@ -147,7 +186,7 @@
 
 		<td class="name"><div>
 		<a class="anchor" href="#__dispose">#</a>
-		<code><a href="source-class-Common.TDisposable.html#30-36" title="Go to source code">_dispose</a>( )</code>
+		<code><a href="source-class-Common.TDisposable.html#43-49" title="Go to source code">_dispose</a>( )</code>
 
 		<div class="description short">
 			<p>Выполняет реальное освобождение ресурсов объекта. Метод должен быть
