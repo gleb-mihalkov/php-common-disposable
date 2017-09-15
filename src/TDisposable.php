@@ -28,6 +28,8 @@ namespace Common
          * Сигнализирует, что ресурсы, занятые объектом, следует освободить.
          *
          * @return void
+         * 
+         * @throws DisposableDisposedException Возникает при повторном вызове метода.
          */
         public function dispose()
         {
