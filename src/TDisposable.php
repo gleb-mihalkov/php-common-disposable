@@ -33,7 +33,7 @@ namespace Common
         {
             if ($this->isDisposed())
             {
-                /** @todo Error. */
+                throw new DisposableDisposedException($this);
             }
 
             $this->_isDisposed = true;
