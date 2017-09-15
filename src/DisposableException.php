@@ -34,6 +34,7 @@ namespace Common
         public function __construct(IDisposable $disposable, string $message)
         {
             parent::__construct($message);
+            $this->_disposable = $disposable;
         }
     }
 }

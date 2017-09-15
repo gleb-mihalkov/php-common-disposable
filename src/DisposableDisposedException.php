@@ -15,7 +15,7 @@ namespace Common
          */
         public function __construct(IDisposable $disposable)
         {
-            parent::__construct($message, 'Disposable is already disposed.');
+            parent::__construct($disposable, 'Disposable is already disposed.');
         }
     }
 }
